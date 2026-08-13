@@ -94,6 +94,22 @@
   .stats dt{color:var(--ink-soft)}
   .stats dd{margin:0;font-family:var(--display);font-weight:700;
             font-variant-numeric:tabular-nums;text-align:right}
+  a.case{text-decoration:none;color:inherit;
+         transition:border-color .15s ease, transform .15s ease}
+  a.case:hover,a.case:focus-visible{border-color:var(--signal);
+         transform:translateY(-1px)}
+  a.case:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+  .case-preview{position:relative;display:block;aspect-ratio:9/16;
+                overflow:hidden;border-radius:3px;background:var(--rule)}
+  .case-preview img{display:block;width:100%;height:100%;object-fit:cover}
+  .case-play{position:absolute;inset:0;display:grid;place-items:center;
+             pointer-events:none}
+  .case-play::before{content:"";width:46px;height:46px;border-radius:50%;
+                     background:rgba(20,24,33,.55);border:2px solid #fff}
+  .case-play::after{content:"";position:absolute;width:0;height:0;
+                    border-style:solid;border-width:8px 0 8px 14px;
+                    border-color:transparent transparent transparent #fff;
+                    margin-left:3px}
 
   .layers{display:flex;flex-direction:column;border:1px solid var(--rule);
           background:var(--panel)}
@@ -165,8 +181,9 @@
   .lc-meta{font-family:var(--display);font-weight:700;font-size:13px;
            color:var(--ink-soft);font-variant-numeric:tabular-nums}
   @media (prefers-reduced-motion:reduce){
-    .link-card{transition:none}
-    .link-card:hover,.link-card:focus-visible{transform:none}
+    .link-card,a.case{transition:none}
+    .link-card:hover,.link-card:focus-visible,
+    a.case:hover,a.case:focus-visible{transform:none}
   }
   /* Telegram is a way to reach a person, not a place with an audience —
      tinted so it does not read as a fifth channel with reach behind it. */
@@ -321,7 +338,12 @@
     <p class="lbl">Все цифры — из аналитики конкретных роликов</p>
   </div>
   <div class="cases">
-    <div class="case lead">
+    <a class="case lead" href="https://www.tiktok.com/@ilusha_help/video/7636051594622110984" target="_blank" rel="noopener noreferrer">
+      <span class="case-preview">
+        <img src="assets/cases/oukitel-1_4m.jpg" alt="Реклама OUKITEL — телефон" width="720" height="1280">
+        <span class="case-play" aria-hidden="true"></span>
+      </span>
+      <span class="lbl">Смотреть в TikTok</span>
       <div>
         <h3>OUKITEL — телефон</h3>
         <div class="num big">1,4 млн</div>
@@ -334,8 +356,13 @@
         <dt>Новых подписчиков</dt><dd>+1 000</dd>
         <dt>Вовлечённость</dt><dd>2,68%</dd>
       </dl>
-    </div>
-    <div class="case q">
+    </a>
+    <a class="case q" href="https://www.tiktok.com/@ilusha_help/video/7606420765495397650" target="_blank" rel="noopener noreferrer">
+      <span class="case-preview">
+        <img src="assets/cases/maono-715k.jpg" alt="Реклама MAONO — микрофон" width="720" height="1280">
+        <span class="case-play" aria-hidden="true"></span>
+      </span>
+      <span class="lbl">Смотреть в TikTok</span>
       <div>
         <h3>MAONO — микрофон</h3>
         <div class="num big">715 тыс.</div>
@@ -347,8 +374,13 @@
         <dt>Новых подписчиков</dt><dd>+277</dd>
         <dt>Вернувшиеся зрители</dt><dd>84%</dd>
       </dl>
-    </div>
-    <div class="case q">
+    </a>
+    <a class="case q" href="https://www.tiktok.com/@ilusha_help/video/7649071292691451144" target="_blank" rel="noopener noreferrer">
+      <span class="case-preview">
+        <img src="assets/cases/oukitel-576k.jpg" alt="Реклама OUKITEL — распаковка" width="720" height="1280">
+        <span class="case-play" aria-hidden="true"></span>
+      </span>
+      <span class="lbl">Смотреть в TikTok</span>
       <div>
         <h3>OUKITEL — телефон</h3>
         <div class="num big">576 тыс.</div>
@@ -360,7 +392,7 @@
         <dt>Новых подписчиков</dt><dd>+232</dd>
         <dt>Украина, этот ролик</dt><dd>93,8%</dd>
       </dl>
-    </div>
+    </a>
   </div>
   <p style="margin-top:20px;color:var(--ink-soft);font-size:15px">Удержание зависит от самого ролика, а не от хронометража: сорокасекундная реклама удержала 19% до конца, тридцатипятисекундная — 9%. С обоими брендами работа продолжается.</p>
 </section>
