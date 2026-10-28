@@ -1,0 +1,13 @@
+/* Final placement and progressive enhancement refinements. */
+.title-star{left:8.1em;top:2.4em}
+.menu-toggle{visibility:hidden}.js .menu-toggle{visibility:visible}
+.evidence-section>.eyebrow{margin-bottom:20px;font-size:10px;color:var(--ink)}
+.text-link{min-height:36px}.header-cta{min-height:44px}.menu-toggle{min-height:44px}
+.contact-section :is(a,button):focus-visible{outline-color:var(--acid)}
+.format-mode{font-family:var(--mono);font-size:9px;letter-spacing:.04em;color:var(--muted)}
+.formats-note{font-size:12px;line-height:1.9;color:var(--muted);max-width:360px;margin-top:25px}
+.bundle-format{display:flex;align-items:center;gap:24px;margin:27px 0 24px;border-top:1px solid #a3b441;padding-top:23px}
+.bundle-format>span{font-size:39px;letter-spacing:-.06em;line-height:1;white-space:nowrap}.bundle-format i{font-style:normal;font-size:25px;vertical-align:5px;margin:0 5px}.bundle-format p{font-size:10px;line-height:1.8}
+@media(min-width:601px) and (max-width:800px){.bundle-format{grid-column:2;grid-row:3;gap:14px;margin:17px 0 24px;padding-top:18px}.bundle-format>span{font-size:29px}.bundle-format p{font-size:9px}}
+@media(max-width:600px){.format-mode{font-size:8px}.formats-note{font-size:11px;margin-top:20px}.bundle-format>span{font-size:36px}.bundle-format{gap:20px}.bundle-format p{font-size:10px}.packages-section .section-heading h2{font-size:42px}}
+@media(max-width:600px){.source-note,.latest-results .source-note{font-size:10px}.bundle-note{font-size:10px}.small-note{font-size:11px}.hero-footnote{font-size:9px}.portrait-label>span{font-size:8px}.hero-visual figcaption{font-size:8px}}
